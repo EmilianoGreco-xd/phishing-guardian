@@ -1,0 +1,116 @@
+PHISHING GUARDIAN - REGLAS HEURISTICAS
+Fecha: 23/09/2026
+Autores: Emiliano Greco, Lucio Sacco, Denzel Alderete Campos
+
+IDEA
+Cada correo empieza con 0 puntos.
+Si una regla se cumple, se suman puntos.
+Al final se clasifica asi:
+- 0 a 19: Bajo
+- 20 a 49: Medio
+- 50 o mas: Alto
+
+========================================
+A. REMITENTE
+========================================
+
+A1. Dominio gratis o raro
+Que mira: el correo de origen.
+Ejemplos sospechosos: @gmail.com diciendo ser un banco, @outlook.com diciendo ser la escuela, dominios con numeros raros.
+Puntos: 15
+
+A2. Nombre visible distinto del correo real
+Que mira: "De: Banco Nacion <algo-raro@otrodominio.com>"
+Si el nombre dice una institucion conocida, pero el correo no coincide, es sospechoso.
+Puntos: 20
+
+A3. Dominio parecido al verdadero (typosquatting)
+Que mira: fecea.edu.ar vs fecea-edu.com, google.com vs g00gle.com
+Puntos: 25
+
+A4. Remitente en lista confiable del usuario
+Que mira: la whitelist que se arma en el paso 7.
+Si esta en la lista, restar puntos.
+Puntos: -30
+
+========================================
+B. ASUNTO
+========================================
+
+B1. Urgencia
+Palabras: urgente, inmediato, ultima oportunidad, tu cuenta sera bloqueada, actua ahora, vencimiento, suspendida, 24 horas.
+Puntos: 10
+
+B2. Amenaza o miedo
+Palabras: bloqueo, demanda, policia, multa, virus detectado, cuenta comprometida.
+Puntos: 12
+
+B3. Premio o dinero facil
+Palabras: ganaste, premio, transferencia, reembolso, factura adjunta, pago pendiente.
+Puntos: 10
+
+B4. Asunto vacio o con muchos signos
+Ejemplos: "!!!!", "URGENTE!!!", asunto vacio.
+Puntos: 5
+
+========================================
+C. CUERPO DEL MENSAJE
+========================================
+
+C1. Pide datos personales
+Pide clave, PIN, tarjeta, codigo de verificacion, usuario, DNI.
+Puntos: 25
+
+C2. Pide hacer clic para no perder la cuenta
+Texto tipo: "verifica tu cuenta", "iniciar sesion aqui", "actualizar datos".
+Puntos: 15
+
+C3. Errores graves de escritura
+Muchos errores, mayusculas excesivas, texto mal traducido.
+Puntos: 8
+
+C4. Saludo generico + pedido urgente
+Ejemplo: "Estimado usuario" + "su cuenta sera cerrada hoy".
+Puntos: 10
+
+========================================
+D. ENLACES Y DOMINIOS
+========================================
+
+D1. El texto del enlace no coincide con la URL
+Ejemplo: se lee "fecea.edu.ar" pero lleva a otra pagina.
+Puntos: 25
+
+D2. Enlace acortado
+bit.ly, tinyurl, t.co, cutt.ly
+Puntos: 10
+
+D3. Usa HTTP en vez de HTTPS en un sitio que deberia ser seguro
+Puntos: 8
+
+D4. Dominio recien creado o desconocido
+Si no es un dominio conocido de escuela, Google, banco, etc.
+Puntos: 10
+
+========================================
+E. ADJUNTOS
+========================================
+
+E1. Adjunto ejecutable o raro
+.zip, .exe, .scr, .js, .iso, .html
+Puntos: 20
+
+E2. Dice "factura" o "boletin" pero manda un comprimido
+Puntos: 15
+
+========================================
+DECISION FINAL
+========================================
+
+Bajo: dejar el correo como esta.
+Medio: marcar sospechoso y avisar en la extension.
+Alto: marcar peligroso y recomendar no tocar enlaces ni adjuntos.
+
+IMPORTANTE
+Estas reglas no reemplazan el criterio de la persona.
+El usuario va a poder marcar remitentes como confiables o desconocidos.

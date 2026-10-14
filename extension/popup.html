@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Phishing Guardian</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icon.png" alt="Logo" class="logo">
+    <div>
+      <h1>Phishing Guardian</h1>
+      <p class="cuenta" id="cuenta">Conectando...</p>
+    </div>
+  </header>
+
+  <label class="label-usuario">Cuenta
+    <select id="usuario"></select>
+  </label>
+
+  <p class="login-link">
+    <a href="http://127.0.0.1:5000/login" target="_blank">Iniciar sesion con otra cuenta</a>
+  </p>
+
+  <div id="lista"></div>
+  <p id="error" class="error"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

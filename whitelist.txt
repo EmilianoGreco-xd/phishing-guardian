@@ -1,0 +1,4 @@
+# Lista de remitentes y dominios confiables
+profesor@fecea.edu.ar
+soporte@fecea.edu.ar
+fecea.edu.ar

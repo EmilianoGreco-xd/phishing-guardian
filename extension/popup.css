@@ -1,0 +1,118 @@
+body {
+  width: 340px;
+  margin: 0;
+  padding: 14px;
+  font-family: Arial, sans-serif;
+  background: #0f1720;
+  color: #e8eef5;
+}
+
+header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cuenta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #9bb0c3;
+}
+
+.tarjeta {
+  background: #1a2532;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: #8fd3c7;
+  text-transform: uppercase;
+}
+
+.tarjeta p {
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.tarjeta span {
+  display: block;
+  color: #9bb0c3;
+  font-size: 11px;
+}
+
+.riesgo {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alto { background: #5a1822; color: #ffb3bd; }
+.medio { background: #5a3b12; color: #ffd59a; }
+.bajo { background: #16351f; color: #b6f0c2; }
+
+.motivos {
+  color: #c5d4e0;
+}
+
+.botones {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  flex: 1;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ok { background: #1f7a4c; }
+.alerta { background: #a33b3b; }
+
+.label-usuario {
+  display: block;
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #9bb0c3;
+}
+
+select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 0;
+  background: #1a2532;
+  color: #e8eef5;
+}
+
+.error {
+  color: #ffb3bd;
+  font-size: 12px;
+}
+
+.tarjeta {
+  margin-bottom: 10px;
+}
