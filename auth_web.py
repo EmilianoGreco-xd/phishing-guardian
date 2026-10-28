@@ -1,5 +1,9 @@
 import os
 
+if os.environ.get("GOOGLE_CREDENTIALS"):
+    with open("credentials_web.json", "w", encoding="utf-8") as f:
+        f.write(os.environ["GOOGLE_CREDENTIALS"])
+
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow
