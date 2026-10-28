@@ -13,7 +13,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 CLIENT_FILE = "credentials_web.json"
-REDIRECT = "http://127.0.0.1:5000/callback"
+REDIRECT = "https://phishing-guardian.onrender.com/callback"
 TOKENS_WEB = "tokens_web"
 
 
